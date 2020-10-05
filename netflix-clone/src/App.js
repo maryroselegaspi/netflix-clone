@@ -8,7 +8,8 @@ const APIKEY = "5a7c7a0a33463163ae0c76e66fa4029a";
 function App() {
   return (
     <div className="app">
-      <h1>Building netflix clone</h1>
+      {/* Nav */}
+      {/* Banner */}
       <Row
         title="Trending Now"
         fetchUrl={request.fetchTrending}
