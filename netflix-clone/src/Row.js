@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Row.css";
 import axios from "./axios";
+// import axios from "axios";
+// const baseURL: "https://api.themoviedb.org/3";
 
 const base_url = "https://image.tmdb/org/t/p/original/";
 function Row({ title, fetchURL }) {
