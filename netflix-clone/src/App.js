@@ -3,6 +3,7 @@ import "./App.css";
 import Row from "./Row";
 import request from "./request.js";
 import { fetchActionMovies } from "./request.js";
+import Banner from "./Banner";
 
 const APIKEY = "5a7c7a0a33463163ae0c76e66fa4029a";
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="app">
       {/* Nav */}
       {/* Banner */}
+      <Banner />
       <Row
         title="Trending Now"
         fetchUrl={request.fetchTrending}
