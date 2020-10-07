@@ -19,14 +19,14 @@ function Row({ title, fetchUrl, isLargeRow }) {
         // "https://api.themoviedb.org/3/" + fetchURL
         // `https://api.themoviedb.org/3/discover/movie?api_key=${APIKEY}&with_genres=28`
       );
-      console.log("this is the request:", request.data.results);
+      // console.log("this is the request:", request.data.results);
       setMovies(request.data.results);
       return request;
     }
     fetchData();
   }, [fetchUrl]);
 
-  console.log("movies:", movies);
+  // console.log("movies:", movies);
   return (
     <div className="row">
       <h1>{title}</h1>

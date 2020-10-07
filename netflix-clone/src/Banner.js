@@ -32,29 +32,27 @@ function Banner() {
 
   console.log("Banner fetch", movie);
   console.log("path:", movie.backdrop_path);
+
+  let bannerStyle = {
+    backgroundSize: "cover",
+    backGroundImage: `("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+    backgroundImage: `url(${base_url}${movie.poster_path})`,
+    backgroundPosition: "center center",
+  };
   return (
-    <div
-      className="banner"
-      style={{
-        backgroundSize: "cover",
-        backGroundImage: `('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
-        // backGroundImage: `url("${base_url}${movie.poster_path}")`,
-        backgroundPosition: "center center",
-      }}
-    >
-      <header>
-        <div className="banner__contents">
-          {/* title */}
-          <h1>{movie?.original_name || movie?.title || movie?.name}</h1>
-          {/* div 2 buttons */}
-          <div className="banner__buttons">
-            <button className="banner_button">Play</button>
-            <button className="banner_button">My List</button>
-          </div>
-          {/* description */}
+    <header className="banner" style={bannerStyle}>
+      <div className="banner__contents">
+        {/* title */}
+        <h1>{movie?.original_name || movie?.title || movie?.name}</h1>
+        {/* div 2 buttons */}
+        <div className="banner__buttons">
+          <button className="banner_button">Play</button>
+          <button className="banner_button">My List</button>
         </div>
-      </header>
-    </div>
+        {/* description */}
+        <h1 className="banner__description">{movie?.overview}</h1>
+      </div>
+    </header>
   );
 }
 
