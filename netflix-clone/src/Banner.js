@@ -30,8 +30,8 @@ function Banner() {
     fetchData();
   }, []);
 
-  console.log("Banner fetch", movie);
-  console.log("path:", movie.backdrop_path);
+  // console.log("Banner fetch", movie);
+  // console.log("path:", movie.backdrop_path);
 
   let bannerStyle = {
     backgroundSize: "cover",
@@ -39,6 +39,10 @@ function Banner() {
     backgroundImage: `url(${base_url}${movie.poster_path})`,
     backgroundPosition: "center center",
   };
+
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  }
   return (
     <header className="banner" style={bannerStyle}>
       <div className="banner__contents">
@@ -48,12 +52,15 @@ function Banner() {
         </h1>
         {/* div 2 buttons */}
         <div className="banner__buttons">
-          <button className="banner_button">Play</button>
-          <button className="banner_button">My List</button>
+          <button className="banner__button">Play</button>
+          <button className="banner__button">My List</button>
         </div>
         {/* description */}
-        <h1 className="banner__description">{movie?.overview}</h1>
+        <h1 className="banner__description">
+          {truncate(movie?.overview, 150)}
+        </h1>
       </div>
+      <div className="banner__fadeBottom" />
     </header>
   );
 }

@@ -12,12 +12,16 @@ function App() {
       {/* Nav */}
       {/* Banner */}
       <Banner />
-      <Row
+      {/* <Row
         title="Trending Now"
         fetchUrl={requests.fetchTrending}
         isLargeRow={true}
+      /> */}
+      <Row
+        title="Originals"
+        fetchUrl={requests.fetchNetflixOriginal}
+        isLargeRow={true}
       />
-      <Row title="Originals" fetchUrl={requests.fetchNetflixOriginal} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
       <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
