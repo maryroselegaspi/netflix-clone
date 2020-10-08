@@ -22,10 +22,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
     fetchData();
   }, [fetchUrl]);
-  // console.log(movies);
+  console.log(movies);
 
   const opts = {
-    height: "460",
+    height: "520",
     width: "100%",
     playerVars: {
       autoplay: 1,
@@ -57,6 +57,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
             className={`row__poster ${isLargeRow && "row__posterLarge"}`}
             src={`${base_url}${
               isLargeRow ? movie.poster_path : movie.backdrop_path
+              // movie?.poster_path
             }`}
             alt={movie.name}
           />

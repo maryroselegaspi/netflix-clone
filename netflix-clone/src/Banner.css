@@ -71,13 +71,13 @@
 }
 .banner__buttonPlay:hover {
   color: #000;
-  background-color: #e6e6e6;
-  transition: all 0.2ss;
+  background-color: #6d6682;
+  transition: all 0.2s;
 }
 .banner__buttonMoreInfo:hover {
   color: #000;
   background-color: #e6e6e6;
-  transition: all 0.2ss;
+  transition: all 0.2s;
 }
 
 .banner__fadeBottom {
