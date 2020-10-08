@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Banner.css";
 import axios from "./axios";
 import requests from "./request.js";
+import { Button } from "@material-ui/core";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import InfoIcon from "@material-ui/icons/Info";
 
 const base_url = "https://image.tmdb.org/t/p/original/"; // for image
 
@@ -50,16 +53,25 @@ function Banner() {
         <h1 className="banner__title">
           {movie?.original_name || movie?.title || movie?.name}
         </h1>
-        {/* div 2 buttons */}
-        <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My List</button>
-        </div>
+
         {/* description */}
         <h1 className="banner__description">
           {truncate(movie?.overview, 150)}
         </h1>
+
+        {/* div 2 buttons */}
+        <div className="banner__buttons">
+          <button className="banner__buttonPlay">
+            <PlayArrowIcon className="banner__buttonIcon" />
+            Play
+          </button>
+          <button className="banner__buttonMoreInfo">
+            <InfoIcon className="banner__buttonIcon" />
+            More Info
+          </button>
+        </div>
       </div>
+
       <div className="banner__fadeBottom" />
     </header>
   );

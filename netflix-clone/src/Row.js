@@ -46,7 +46,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   };
   return (
     <div className="row">
-      <h1>{title}</h1>
+      <h2 className="row__title">{title}</h2>
       {/* Title */}
       <div className="row__posters">
         {/* several row posters */}

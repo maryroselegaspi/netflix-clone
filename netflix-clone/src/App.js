@@ -10,28 +10,27 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-
       <Banner />
-      {/* <Row
+      <Row
         title="Trending Now"
         fetchUrl={requests.fetchTrending}
         isLargeRow={true}
-      /> */}
+      />
       <Row
         title="Originals"
         fetchUrl={requests.fetchNetflixOriginal}
-        isLargeRow={true}
+        // isLargeRow={true}
       />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
       <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
       <Row title="Horror Movies" fetchUrl={requests.fetchHOrrorMovies} />
-      {/* <Row
+      <Row
         title="Action Movies"
-        fetchUrl={fetchActionMovies}
-        isLargeRow={true}
-      /> */}
+        fetchUrl={requests.fetchActionMovies}
+        // isLargeRow={true}
+      />
       {/* <Row
         title="Action Movies"
         fetchUrl={`/discover/movie?api_key=${APIKEY}&with_genres=28`}
