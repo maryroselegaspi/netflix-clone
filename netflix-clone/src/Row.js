@@ -3,7 +3,7 @@ import "./Row.css";
 import axios from "./axios";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
-import "url-search-params-polyfill";
+// import "url-search-params-polyfill";
 
 const APIKEY = "5a7c7a0a33463163ae0c76e66fa4029a"; //api_key
 
