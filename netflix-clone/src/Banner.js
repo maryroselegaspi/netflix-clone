@@ -35,8 +35,8 @@ function Banner() {
 
   let bannerStyle = {
     backgroundSize: "cover",
-    backGroundImage: `("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-    backgroundImage: `url(${base_url}${movie.poster_path})`,
+    // backGroundImage: `("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+    backgroundImage: `url(${base_url}${movie?.backdrop_path})`,
     backgroundPosition: "center center",
   };
 

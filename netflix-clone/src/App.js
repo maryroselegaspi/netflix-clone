@@ -2,15 +2,15 @@ import React from "react";
 import "./App.css";
 import Row from "./Row";
 import requests from "./request.js";
-// import { fetchActionMovies } from "./request.js";
 import Banner from "./Banner";
+import Navbar from "./Nav";
 
 const APIKEY = "5a7c7a0a33463163ae0c76e66fa4029a";
 function App() {
   return (
     <div className="app">
-      {/* Nav */}
-      {/* Banner */}
+      <Navbar />
+
       <Banner />
       {/* <Row
         title="Trending Now"
