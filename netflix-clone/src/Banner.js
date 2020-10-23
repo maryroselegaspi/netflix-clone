@@ -10,6 +10,11 @@ const base_url = "https://image.tmdb.org/t/p/original/"; // for image
 
 function Banner() {
   const [movie, setMovie] = useState([]);
+  const [trailerUrl, setTrailerUrl] =useState('');
+  const [open, setOpen] =useState(false);
+
+ 
+
 
   useEffect(() => {
     async function fetchData() {
@@ -46,6 +51,8 @@ function Banner() {
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
+  
+
   return (
     <header className="banner" style={bannerStyle}>
       <div className="banner__contents">
@@ -71,7 +78,6 @@ function Banner() {
           </button>
         </div>
       </div>
-
       <div className="banner__fadeBottom" />
     </header>
   );

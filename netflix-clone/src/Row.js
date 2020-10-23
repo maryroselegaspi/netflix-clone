@@ -3,7 +3,9 @@ import "./Row.css";
 import axios from "./axios";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
+import VideoModal from "./VideoModal";
 // import "url-search-params-polyfill";
+
 
 const APIKEY = "5a7c7a0a33463163ae0c76e66fa4029a"; //api_key
 
@@ -12,6 +14,7 @@ const base_url = "https://image.tmdb.org/t/p/original/"; // for image
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
+ 
 
   useEffect(() => {
     // if [] run once when the row loads, and dont run again
@@ -44,6 +47,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
         .catch((error) => console.log(error));
     }
   };
+  
   return (
     <div className="row">
       <h2 className="row__title">{title}</h2>
@@ -66,6 +70,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
       {/* Container => posters */}
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+      {/* {trailerUrl && <VideoModal videoId={trailerUrl} opts={opts} />} */}
     </div>
   );
 }
